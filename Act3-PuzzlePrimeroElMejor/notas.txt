@@ -1,0 +1,89 @@
+def leer_archivo(nombre_archivo):
+    - Abre archivo
+    - las primeras 3 lineas las guarda en una lista de 3 listas llamada "inicio"
+        las otras 3 en "meta"
+    
+def manhattan(estado, meta):
+    - recorre las fichas del 1 al 8
+    - Para cada ficha:
+        1.- estado.index(num) da la posición lineal (0..8); divmod(...,3) la convierte a coordenadas (fila, columna) → (i,j).
+        2.- Igual para la posición objetivo (x,y).
+        3.- La contribución de esa ficha a la heurística es |i-x| + |j-y| (distancia Manhattan).
+
+def mover(estado, direccion):
+    - Encuentra la posición del 0 (es como el espacio vacio bro)
+    - Calcula fila/col actual y suma el desplazamiento segun la dirección
+    - Si la nueva posición está dentro del tablero, construye un nuevi estado
+        intercambiando 0 con la ficha de la casilla destino y devuelve la nueva tupla
+        df= desplazamiento en filas, dc = despl. en columnas --> direccion elegida
+        nf= nueva posicion fila, nc=... Columna              --> nueva direccion
+
+def obtener_vecinos(estado):
+    - genera los 4 vecinos (si se pueden, son los estados alcanzables) y devuelve en lista
+      el nuevo estado con el movimiento aplicado
+
+def best_first_search(inicio, meta):
+    - Se empuja el estado inicial con su heurística y camino vacío
+    - bucle principal:
+        1.- heappop saca el elemento con menor heurística (más prometedor según la heurística).
+        2- Si actual es la meta, retorna camino (se encontró la secuencia de movimientos).
+        3.- Si actual ya fue procesado (visitados), lo salta (esto evita re-expansiones).
+        4.- Marca actual como visitado
+        5.- Genera sus vecinos; si un vecino aún no está en visitados, crea nuevo_camino = camino + [mov] 
+            y empuja (heuristica(vecino), vecino, nuevo_camino) en la frontera.
+        6.- Si se vacía la frontera sin encontrar la meta, devuelve None.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+La heurística Manhattan
+la heurística Manhattan para el 8-puzzle suma, para cada ficha, la distancia en “rectas” (filas+columnas) entre su posición actual y su posición objetivo. 
+Matemáticamente, si la ficha v está en (r1,c1) y su destino es (r2,c2), su contribución es |r1-r2| + |c1-c2|. Se ignora el 0.
+https://www.datacamp.com/es/tutorial/manhattan-distance
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+Más casos de usis
+1 2 3
+4 5 0
+7 8 6
+1 2 3
+4 5 6
+7 8 0
+
+
+2 0 3
+1 8 4
+7 6 5
+1 2 3
+8 0 4
+7 6 5
+
+
+
+1 3 4
+8 6 2
+7 0 5
+1 2 3
+8 0 4
+7 6 5
+
+
+
+1 2 3
+4 5 6
+8 7 0
+1 2 3
+4 5 6
+7 8 0
+
+
+
+
+        
+
+
+
+
+
+
+
