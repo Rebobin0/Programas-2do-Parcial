@@ -1,3 +1,8 @@
+Un heap es una estructura de datos tipo árbol binario completo donde:
+    El elemento más pequeño (o más grande, según el tipo de heap) siempre está en la raíz.
+
+En Python, heapq implementa un min-heap, es decir, el elemento con menor valor numérico siempre estará al frente.
+
 def leer_archivo(nombre_archivo):
     - Abre archivo
     - las primeras 3 lineas las guarda en una lista de 3 listas llamada "inicio"
@@ -13,7 +18,7 @@ def manhattan(estado, meta):
 def mover(estado, direccion):
     - Encuentra la posición del 0 (es como el espacio vacio bro)
     - Calcula fila/col actual y suma el desplazamiento segun la dirección
-    - Si la nueva posición está dentro del tablero, construye un nuevi estado
+    - Si la nueva posición está dentro del tablero, construye un nuevo estado
         intercambiando 0 con la ficha de la casilla destino y devuelve la nueva tupla
         df= desplazamiento en filas, dc = despl. en columnas --> direccion elegida
         nf= nueva posicion fila, nc=... Columna              --> nueva direccion
@@ -47,8 +52,8 @@ Más casos de usis
 4 5 0
 7 8 6
 1 2 3
-4 5 6
-7 8 0
+8 0 4
+7 6 5
 
 
 2 0 3
@@ -73,8 +78,8 @@ Más casos de usis
 4 5 6
 8 7 0
 1 2 3
-4 5 6
-7 8 0
+8 0 4
+7 6 5
 
 
 
