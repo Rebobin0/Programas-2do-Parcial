@@ -1,4 +1,4 @@
-import heapq #colla de prioridad 
+import heapq #cola de prioridad 
 
 def leer_archivo(nombre_archivo):
     with open(nombre_archivo, 'r') as f:
@@ -62,7 +62,7 @@ def best_first_search(inicio, meta):
     return None
 
 def main():
-    inicio, meta = leer_archivo('puzzle.txt')
+    inicio, meta = leer_archivo('Act3-PuzzlePrimeroElMejor/puzzle.txt')
     camino = best_first_search(inicio, meta)
     if camino:
         print("Solución encontrada en", len(camino), "movimientos:")
