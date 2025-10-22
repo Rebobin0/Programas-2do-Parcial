@@ -61,7 +61,7 @@ def a_estrella(M, N, inicio, fin, transito, seguridad, trafico): #algoritmo a es
 
 
 def main():
-    archivo = "mapa.txt"
+    archivo = "./actividad4/mapa.txt"
     M, N, inicio, fin, transito, seguridad, trafico = leer_archivo(archivo)
     rutas = a_estrella(M, N, inicio, fin, transito, seguridad, trafico)
 
