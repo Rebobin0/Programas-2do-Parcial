@@ -22,7 +22,6 @@ class DetectorNumeros:
         
         self._cargar_patrones()
         print("Patrones cargados correctamente (tablas de frecuencias)\n")
-    
 
     def _cargar_patrones(self):
         for digito in range(10):
@@ -194,7 +193,7 @@ def main():
         detector = DetectorNumeros()
         
         # Archivo de entrada
-        nombre_archivo = "7.xlsx"
+        nombre_archivo = "9.xlsx"
         
         # Procesar archivo
         resultado = detector.reconocer_numero(

@@ -802,6 +802,6 @@ Para casos más complejos, se recomendarían técnicas de machine learning como 
 
 ---
 
-**Autor:** Sistema de Reconocimiento de Dígitos  
+**Autores:** Emiliano Rebolledo Navarrete, Azareth Trejo Alvarez, Emilio Abel Zuñiga Cruz   
 **Fecha:** Diciembre 2025  
-**Curso:** Inteligencia Artificial - 7mo Semestre
+**Curso:** Inteligencia Artificial - 7mo Semestre - Instituto Tecnológico de Celaya
